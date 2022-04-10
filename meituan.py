@@ -28,7 +28,7 @@ def play_voice(content):
     system = platform.system()
     if system == "Windows":
         from playsound import playsound
-        video_path = os.path.join(os.getcwd(), "11.mp3")
+        video_path = os.path.join(os.getcwd(), "sources/success.mp3")
         playsound(video_path)
     else:
         os.system(f'say "{content}"')
