@@ -43,6 +43,3 @@ python meituan.py
 
 再展示一下抢到的菜吧，同时祝大家早日抢到自己喜欢的菜吧，也希望疫情赶紧结束：
 ![](https://img-blog.csdnimg.cn/86b6a70bdd14416e868ac566cea08657.png)
-货到了，看看鲍鱼：
-![](https://s3.xoimg.com/i/2022/04/10/faacos.jpg)
-![](https://s3.xoimg.com/i/2022/04/10/far7g0.jpg)
