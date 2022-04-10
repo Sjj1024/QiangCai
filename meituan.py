@@ -59,6 +59,6 @@ def run(device_name):
 
 
 if __name__ == '__main__':
-    # 此处填设备编号：由1024我的小表妹原创
+    # 这是美团抢菜，此处填设备编号：
     device_name = "b8c282ac"
     run(device_name)
