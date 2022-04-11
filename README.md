@@ -7,10 +7,13 @@
 
 使用说明：
 博客教程地址：https://1024shen.com/archives/7493
+
 远程协助软件地址：https://www.todesk.com/download.html
+
 
 上海现在抢菜之苦，真的有口说不出，每天早上6点，6点半，8点半，体验过的人的都知道，即便手速再快，还是抢不到.....
 然后就有了下面的抢菜程序，完全由Python实现，并会附上教程：(兼容mac和windows平台，抢成功后会播放声音提醒)
+
 
 一.安装环境
 安装python3环境:
@@ -19,8 +22,9 @@ windows10以上下载链接: https://wwd.lanzouf.com/i6AEm02zzppi  （安装的
 windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的时候记得勾选 add python to path）
 
 
-并安装依赖： pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
+并安装依赖： 
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
+
 
 
 adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）
