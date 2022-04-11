@@ -55,7 +55,7 @@ python -m uiautomator2 init
 三.开始抢菜
 打开美团，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
 ![](https://img-blog.csdnimg.cn/abc35dbaedc044b9b11e42f0d5f35313.png)
-然后开始运行代码： 
+开始运行代码： 
 python meituan.py
 
 最后看一下成果：
