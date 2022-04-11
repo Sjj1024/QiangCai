@@ -21,8 +21,9 @@ windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的�
 
 并安装依赖： pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
-adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）
 
+
+adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）
 ( mac电脑adb安装：brew install android-platform-tools
 windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h
 1.解压
