@@ -55,6 +55,10 @@ python -m uiautomator2 init
 三.开始抢菜
 打开美团，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
 ![](https://img-blog.csdnimg.cn/abc35dbaedc044b9b11e42f0d5f35313.png)
+
+用记事本打开meituan.py，修改源代码中的设备编码（改为你自己的，adb devices命令执行后得到的结果中的）：
+![](https://img-blog.csdnimg.cn/834563085e7046d0b4117d802da639a3.png)
+
 开始运行代码： 
 python meituan.py
 
