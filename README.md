@@ -2,7 +2,7 @@
 上海疫情被封在家，开始抢菜之路，可以开启多台设备同时抢菜
 
 个人微信：sxsuccess，加时请说明来意，否则不通过
-微信群：![](https://img-blog.csdnimg.cn/c9abc984d3134cebb5b87d2607760fd8.png)
+微信群，因为人数超200，加微信邀请你进群：![](https://1024shen.com/wp-content/uploads/2022/04/2022041203275121.jpg)
 
 
 使用说明：
