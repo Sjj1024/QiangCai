@@ -68,6 +68,11 @@ def qiang_cai(device_name):
             play_voice("success")
             break
 
+        if d(textContains="普通支付").exists:
+            print("普通支付")
+            play_voice("success")
+            break
+
         if d(resourceId="btn-line").exists:
             play_voice("success")
             print("确认支付")
