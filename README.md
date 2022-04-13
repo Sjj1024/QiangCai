@@ -24,6 +24,8 @@ windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的�
 
 并安装依赖： 
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
+
+
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 
 
