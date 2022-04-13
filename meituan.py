@@ -111,7 +111,6 @@ def run(device_list):
 
 
 if __name__ == '__main__':
-    # get_device_list()
     # 修改为设备编码
     device_list = "RFCN309ABWX"
     run(device_list)

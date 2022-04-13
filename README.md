@@ -15,10 +15,16 @@
 
 ## 一.安装环境
 安装python3环境:  
-mac: 
+Mac电脑:   
+如果没有brew，先安装brew:
+```
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+然后再执行：
 ```python
 brew install python
 ```
+Windows电脑：  
 windows10以上下载链接: https://wwd.lanzouf.com/i6AEm02zzppi  （安装的时候记得勾选 add python to path）
 windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的时候记得勾选 add python to path）
 
