@@ -59,37 +59,38 @@ def run(device_name):
             print("点击重新加载")
             d(text="重新加载").click()
 
-        if d(text="立即支付").exists:
-            print("点击立即支付")
-            d(text="立即支付").click()
-
-        hour_count = get_current_hour(d)
-        for i in range(hour_count):
-            info = d.xpath(
-                '//*[@resource-id="com.yaya.zone:id/rv_selected_hour"]'
-                '/android.view.ViewGroup[%s]' % str(i + 1)).get(timeout=1).info
-            if info.get("enabled", "") != "false":
-                print("TMD 有运力了")
-                d.xpath(
-                    '//*[@resource-id="com.yaya.zone:id/rv_selected_hour"]'
-                    '/android.view.ViewGroup[%s]' % str(i + 1)).click_exists(timeout=1)
-                print("点击了第" + str(i + 1) + "个")
-                ti_xing()
-                if d(text="立即支付").exists:
-                    print("点击立即支付")
-                    d(text="立即支付").click()
-            if i == hour_count - 1:
-                print("没有运力了")
-                d.xpath('//*[@resource-id="com.yaya.zone:id/'
-                        'iv_dialog_select_time_close"]').click_exists(timeout=1)
-                d.xpath('//*[@resource-id="com.yaya.zone:id/'
-                        'iv_order_back"]').click_exists(timeout=1)
-
         if d(text="下单失败").exists:
             print("下单失败")
             if d(text="返回购物车").exists:
                 print("点击返回购物车")
                 d(text="返回购物车").click()
+        else:
+            if d(text="立即支付").exists:
+                print("点击立即支付")
+                d(text="立即支付").click()
+            if d(text="请选择送达时间").exists:
+                print("请选择送达时间")
+                hour_count = get_current_hour(d)
+                for i in range(hour_count):
+                    info = d.xpath(
+                        '//*[@resource-id="com.yaya.zone:id/rv_selected_hour"]'
+                        '/android.view.ViewGroup[%s]' % str(i + 1)).get(timeout=1).info
+                    if info.get("enabled", "") != "false":
+                        print("TMD 有运力了")
+                        d.xpath(
+                            '//*[@resource-id="com.yaya.zone:id/rv_selected_hour"]'
+                            '/android.view.ViewGroup[%s]' % str(i + 1)).click_exists(timeout=1)
+                        print("点击了第" + str(i + 1) + "个")
+                        ti_xing()
+                        if d(text="立即支付").exists:
+                            print("点击立即支付")
+                            d(text="立即支付").click()
+                    if i == hour_count - 1:
+                        print("没有运力了")
+                        d.xpath('//*[@resource-id="com.yaya.zone:id/'
+                                'iv_dialog_select_time_close"]').click_exists(timeout=1)
+                        d.xpath('//*[@resource-id="com.yaya.zone:id/'
+                                'iv_order_back"]').click_exists(timeout=1)
 
         if d(text="确认交易").exists:
             print("点击确认交易")

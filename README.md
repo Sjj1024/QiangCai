@@ -15,18 +15,20 @@
 然后就有了下面的抢菜程序，完全由Python实现，并会附上教程：(兼容mac和windows平台，抢成功后会播放声音提醒)
 
 
-一.安装环境
+## 一.安装环境
 安装python3环境:
-mac: brew install python
+mac: 
+```python
+brew install python
+```
 windows10以上下载链接: https://wwd.lanzouf.com/i6AEm02zzppi  （安装的时候记得勾选 add python to path）
 windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的时候记得勾选 add python to path）
 
 
 并安装依赖： 
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
-
-
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+```python
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 
 adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）
@@ -40,7 +42,7 @@ windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h
 )
 手机：安卓手机一部或者多部，或者安卓虚拟机一个或者多个
 
-二.调试环境
+## 二.调试环境
 adb：adb安装成功后，在命令行输入adb，会出现以下提示：
 ![](https://img-blog.csdnimg.cn/140a1fc0bd3d44a1a226ee3fee6b9a89.png)
 adb start-server：启动服务
@@ -54,7 +56,7 @@ python -m uiautomator2 init
 会在安卓设备上安装一个依赖ATX软件：
 ![](https://img-blog.csdnimg.cn/4349aac9a9334b629141628e94bf8c84.png)
 
-三.开始抢菜
+##三.开始抢菜
 打开美团，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
 ![](https://img-blog.csdnimg.cn/abc35dbaedc044b9b11e42f0d5f35313.png)
 
