@@ -45,7 +45,7 @@ windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h
 ## 二.调试环境
 adb：adb安装成功后，在命令行输入adb，会出现以下提示：
 ![](https://img-blog.csdnimg.cn/140a1fc0bd3d44a1a226ee3fee6b9a89.png)
-adb start-server：启动服务
+adb start-server：启动服务  
 adb devices：查看连接的设备列表
 当安卓手机和电脑连接之后，再输入：adb devices，就可以看到设备编号，记住这个编号，后面有用。
 强烈推荐使用安卓虚拟机网易MUMU，官网地址：https://mumu.163.com/mac/index.html
@@ -56,7 +56,7 @@ python -m uiautomator2 init
 会在安卓设备上安装一个依赖ATX软件：
 ![](https://img-blog.csdnimg.cn/4349aac9a9334b629141628e94bf8c84.png)
 
-##三.开始抢菜
+## 三.开始抢菜
 打开美团，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
 ![](https://img-blog.csdnimg.cn/abc35dbaedc044b9b11e42f0d5f35313.png)
 
