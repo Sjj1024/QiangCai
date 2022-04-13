@@ -35,6 +35,11 @@ def qiang_cai(device_name):
         if d(textContains="结算(").exists:
             print("点击结算")
             d(textContains="结算(").click()
+        else:
+            print("点击全选")
+            if d(text="全选").exists:
+                print("点击全选")
+                d(text="全选").click()
 
         if d(text="我知道了").exists:
             print("点击我知道了")

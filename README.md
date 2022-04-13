@@ -52,7 +52,7 @@ adb start-server：启动服务
 adb devices：查看连接的设备列表    
 adb devices，就可以看到设备编号，记住这个编号，后面有用。    
 强烈推荐使用安卓虚拟机网易MUMU，官网地址：https://mumu.163.com/mac/index.html
-（如果用的安卓虚拟机，需要注意：需要先执行：adb kill-server，然后再执行：adb start-server，再执行：adb devices，才会显示设备列表）
+（如果用的安卓虚拟机，需要注意：开启root权限，然后执行：adb kill-server，然后再执行：adb start-server，再执行：adb devices，才会显示设备列表）
 ![](https://img-blog.csdnimg.cn/ae2e00c88c6a473f80946d07d5677ce0.png)  
 设备上安装atx-agent：
 ```python
