@@ -31,7 +31,7 @@ adb：您可以转到[官方文档]（https://developer.android.com/studio/comma
 (   
 mac电脑adb安装：brew install android-platform-tools  
 windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h  
-1.解压
+1.解压  
 解压到任意目录,例如我都放在D:\Program Files文件夹下面  
 这样adb的目录就是D:\Program Files\platform-tools  
 2.添加环境变量  
@@ -40,11 +40,12 @@ windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h
 手机：安卓手机一部或者多部，或者安卓虚拟机一个或者多个
 
 ## 二.调试环境
+现将手机和电脑链接。当安卓手机和电脑连接之后，再输入：  
 adb：adb安装成功后，在命令行输入adb，会出现以下提示：
 ![](https://img-blog.csdnimg.cn/140a1fc0bd3d44a1a226ee3fee6b9a89.png)
-adb start-server：启动服务  
-adb devices：查看连接的设备列表  
-当安卓手机和电脑连接之后，再输入：adb devices，就可以看到设备编号，记住这个编号，后面有用。  
+adb start-server：启动服务   
+adb devices：查看连接的设备列表    
+adb devices，就可以看到设备编号，记住这个编号，后面有用。    
 强烈推荐使用安卓虚拟机网易MUMU，官网地址：https://mumu.163.com/mac/index.html
 （如果用的安卓虚拟机，需要注意：需要先执行：adb kill-server，然后再执行：adb start-server，再执行：adb devices，才会显示设备列表）
 ![](https://img-blog.csdnimg.cn/ae2e00c88c6a473f80946d07d5677ce0.png)  
