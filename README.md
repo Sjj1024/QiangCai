@@ -27,16 +27,15 @@ windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的�
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）
-(   
+adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）  
 mac电脑adb安装：brew install android-platform-tools  
 windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h  
 1.解压  
 解压到任意目录,例如我都放在D:\Program Files文件夹下面  
 这样adb的目录就是D:\Program Files\platform-tools  
 2.添加环境变量  
-此电脑->系统属性->高级系统设置->环境变量->系统变量->Path->添加->D:\Program Files\platform-tools
-)  
+此电脑->系统属性->高级系统设置->环境变量->系统变量->Path->添加->D:\Program Files\platform-tools  
+（如果不想装adb，在项目的sources目录下带有win和mac的adb依赖，直接进入文件夹，运行adb也行）
 手机：安卓手机一部或者多部，或者安卓虚拟机一个或者多个
 
 ## 二.调试环境
