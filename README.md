@@ -34,7 +34,10 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）  
-mac电脑adb安装：brew install android-platform-tools  
+mac电脑adb安装：
+```python
+brew install android-platform-tools  
+```
 windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h  
 1.解压  
 解压到任意目录,例如我都放在D:\Program Files文件夹下面  
