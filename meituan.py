@@ -108,12 +108,12 @@ def get_device_list():
         return phone_num
 
 
-def run(device_list):
+def run(device_name):
     play_voice("start")
     print("开始执行抢菜程序.....")
     while True:
         try:
-            qiang_cai(device_list)
+            qiang_cai(device_name)
         except Exception as e:
             print(e)
             play_voice("error")
@@ -122,5 +122,5 @@ def run(device_list):
 
 if __name__ == '__main__':
     # 修改为设备编码
-    device_list = "b8c282ac"
-    run(device_list)
+    device_name = "b8c282ac"
+    run(device_name)

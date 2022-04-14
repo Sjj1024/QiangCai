@@ -28,7 +28,7 @@ Windows电脑：
 windows10以上下载链接: https://wwd.lanzouf.com/i6AEm02zzppi  （安装的时候记得勾选 add python to path）
 windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的时候记得勾选 add python to path）
 
-并安装依赖： 或者pip3
+进入QiangCai文件夹，并安装依赖： 或者pip3
 ```python
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```

@@ -37,8 +37,7 @@ def play_voice(content):
     threading.Thread(target=playsound, args=(video_path,)).start()
 
 
-def run(device_name):
-    play_voice("start")
+def qiang_cai(device_name):
     d = connect_phone(device_name)
     count = 1
     time_start = time.time()
@@ -49,8 +48,7 @@ def run(device_name):
             print("点击结算")
             d(textContains="结算(").click()
         else:
-            print("点击全选")
-            if d(text="全选").exists:
+            if d(text="全选").exists and d(textContains="结算").exists:
                 print("点击全选")
                 d(text="全选").click()
 
@@ -88,9 +86,9 @@ def run(device_name):
                             '//*[@resource-id="com.yaya.zone:id/rv_selected_hour"]'
                             '/android.view.ViewGroup[%s]' % str(i + 1)).click_exists(timeout=1)
                         print("点击了第" + str(i + 1) + "个")
-                        ti_xing()
                         if d(text="立即支付").exists:
                             print("点击立即支付")
+                            play_voice("success")
                             d(text="立即支付").click()
                     if i == hour_count - 1:
                         print("没有运力了")
@@ -117,6 +115,18 @@ def run(device_name):
         print("本次花费时间:", time.time() - start)
         print("总共花费时间:", (time.time() - time_start) / 60, "分钟，第", count, "次")
         count += 1
+
+
+def run(device_name):
+    play_voice("start")
+    print("开始执行抢菜程序.....")
+    while True:
+        try:
+            qiang_cai(device_name)
+        except Exception as e:
+            print(e)
+            play_voice("error")
+            time.sleep(5)
 
 
 if __name__ == '__main__':
