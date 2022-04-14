@@ -1,28 +1,19 @@
 import os
+import threading
 import time
+
 import uiautomator2 as u2
 
-
-# from playsound import playsound
 
 # 连接手机
 def connect_phone(device_name):
     d = u2.connect(device_name)
-    if not d.service("uiautomator").running():
+    if not d.uiautomator.start():
         # 启动uiautomator服务
         print("start uiautomator")
-        d.service("uiautomator").start()
+        d.uiautomator.start()
         time.sleep(2)
-
-    if not d.agent_alive:
-        print("agent_alive is false")
-        u2.connect()
-        d = u2.connect(device_name)
     return d
-
-
-def ti_xing():
-    os.system('say "抢到菜了，快来看"')
 
 
 # 时间判断
@@ -36,7 +27,18 @@ def get_current_hour(d):
     return info.get("childCount", 0)
 
 
+def play_voice(content):
+    """
+    播放声音提醒
+    """
+    from playsound import playsound
+    root_path = os.getcwd()
+    video_path = os.path.join(root_path, "sources", "videos", f"{content}.mp3")
+    threading.Thread(target=playsound, args=(video_path,)).start()
+
+
 def run(device_name):
+    play_voice("start")
     d = connect_phone(device_name)
     count = 1
     time_start = time.time()
@@ -46,6 +48,11 @@ def run(device_name):
         if d(textContains="结算(").exists:
             print("点击结算")
             d(textContains="结算(").click()
+        else:
+            print("点击全选")
+            if d(text="全选").exists:
+                print("点击全选")
+                d(text="全选").click()
 
         if d(text="我知道了").exists:
             print("点击我知道了")
@@ -68,8 +75,8 @@ def run(device_name):
             if d(text="立即支付").exists:
                 print("点击立即支付")
                 d(text="立即支付").click()
-            if d(text="请选择送达时间").exists:
-                print("请选择送达时间")
+            if d(text="选择送达时间").exists:
+                print("选择送达时间")
                 hour_count = get_current_hour(d)
                 for i in range(hour_count):
                     info = d.xpath(
@@ -94,17 +101,18 @@ def run(device_name):
 
         if d(text="确认交易").exists:
             print("点击确认交易")
+            play_voice("success")
             d(text="确认交易").click()
-            ti_xing()
 
         if d(text="确认并支付").exists:
             print("点击确认并支付")
+            play_voice("success")
             d(text="确认并支付").click()
 
         if d(resourceId="btn-line").exists:
             print("确认支付")
+            play_voice("success")
             d(resourceId="btn-line").click()
-            ti_xing()
 
         print("本次花费时间:", time.time() - start)
         print("总共花费时间:", (time.time() - time_start) / 60, "分钟，第", count, "次")

@@ -28,7 +28,7 @@ Windows电脑：
 windows10以上下载链接: https://wwd.lanzouf.com/i6AEm02zzppi  （安装的时候记得勾选 add python to path）
 windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的时候记得勾选 add python to path）
 
-并安装依赖： 
+并安装依赖： 或者pip3
 ```python
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
@@ -38,15 +38,17 @@ mac电脑adb安装：
 ```python
 brew install android-platform-tools  
 ```
-windows adb安装: 下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h  
+windows adb安装:   
+下载链接：https://wwd.lanzouf.com/iQWJT02zyz0h  
 1.解压  
-解压到任意目录,例如我都放在D:\Program Files文件夹下面  
+解压到任意目录,例如我都放在D:\Program Files文件夹下面   
 这样adb的目录就是D:\Program Files\platform-tools  
 2.添加环境变量  
 此电脑->系统属性->高级系统设置->环境变量->系统变量->Path->添加->D:\Program Files\platform-tools  
 （如果不想装adb，在项目的sources目录下带有win和mac的adb依赖，直接进入文件夹，运行adb也行。但不保证兼容每个设备）  
 安卓手机：安卓手机一部或者多部，或者安卓虚拟机一个或者多个，安装有美团外卖或者叮咚买菜  
-美团外卖下载：https://wwd.lanzouf.com/iGVRg031d9sf
+美团外卖下载：https://wwd.lanzouf.com/iGVRg031d9sf  
+叮咚买菜下载：https://wwd.lanzouf.com/izLDB0362tja  
 
 ## 二.调试环境
 现将手机和电脑链接。当安卓手机和电脑连接之后，再输入：  
@@ -58,13 +60,13 @@ adb devices，就可以看到设备编号，记住这个编号，后面有用。
 强烈推荐使用安卓虚拟机网易MUMU，官网地址：https://mumu.163.com/mac/index.html
 （如果用的安卓虚拟机，需要注意：开启root权限，然后执行：adb kill-server，然后再执行：adb start-server，再执行：adb devices，才会显示设备列表）
 ![](https://img-blog.csdnimg.cn/ae2e00c88c6a473f80946d07d5677ce0.png)  
-设备上安装atx-agent：
+设备上安装atx-agent：或者python3
 ```python
 python -m uiautomator2 init 
 ```
-会在安卓设备上安装一个依赖ATX软件：
+会在安卓设备上自动安装一个依赖ATX软件：
 ![](https://img-blog.csdnimg.cn/4349aac9a9334b629141628e94bf8c84.png)
-
+  
 ## 三.开始抢菜
 打开美团，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
 ![](https://img-blog.csdnimg.cn/abc35dbaedc044b9b11e42f0d5f35313.png)
@@ -72,9 +74,18 @@ python -m uiautomator2 init
 用记事本打开meituan.py，修改源代码中的设备编码（改为你自己的，adb devices命令执行后得到的结果中的）：
 ![](https://img-blog.csdnimg.cn/834563085e7046d0b4117d802da639a3.png)
 
-开始运行代码： 
+开始美团运行代码：
 ```python
 python meituan.py
+或者：
+python3 meituan.py
+```
+
+开始叮咚抢菜：
+```python
+python dingdong.py
+或者
+python3 dingdong.py
 ```
 
 最后看一下成果：
