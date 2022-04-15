@@ -66,7 +66,7 @@ adb devices，就可以看到设备编号，记住这个编号，后面有用。
 ```python
 python -m uiautomator2 init 
 ```
-会在安卓设备上自动安装一个依赖ATX软件：
+会在安卓设备上自动安装一个依赖ATX软件：  
 ![](https://img-blog.csdnimg.cn/4349aac9a9334b629141628e94bf8c84.png)
   
 ## 三.开始抢菜
@@ -89,6 +89,9 @@ python dingdong.py
 或者
 python3 dingdong.py
 ```
+
+多设备运行：  
+复制meituan.py 或者dingdong.py，修改复制文件中的设备编号，然后执行开始程序即可。  
 
 最后看一下成果：
 （因为我有两个安卓手机，又另外开了一个安卓虚拟机，所以就是下面效果了，哈哈哈哈哈）
