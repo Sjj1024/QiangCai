@@ -4,6 +4,7 @@ import time
 import threading
 import uiautomator2 as u2
 
+
 # 连接手机
 def connect_phone(device_name):
     d = u2.connect(device_name)
@@ -120,6 +121,6 @@ def run(device_name):
 
 
 if __name__ == '__main__':
-    # 修改为设备编码
-    device_name = "RFCN309ABWX"
+    # 修改为设备编码，多设备运行时第二个设备文件
+    device_name = "b8c282ac"
     run(device_name)

@@ -34,6 +34,11 @@ windows7以上下载链接: https://wwd.lanzouf.com/i55kC02zzqsh （安装的�
 ```python
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+或者：
+```python
+pip install playsound -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --pre -U uiautomator2
+```
 
 adb：您可以转到[官方文档]（https://developer.android.com/studio/command-line/adb）  
 mac电脑adb安装：
