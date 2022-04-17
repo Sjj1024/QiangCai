@@ -25,6 +25,11 @@ def play_voice(content):
     video_path = os.path.join(root_path, "sources", "videos", f"{content}.mp3")
     threading.Thread(target=playsound, args=(video_path,)).start()
 
+def click_btn(d, text):
+    if d(textContains=text).exists:
+        print("点击" + text)
+        d(textContains=text).click()
+
 def qiang_cai(device_name):
     d = connect_phone(device_name)
     d.app_start("com.meituan.retail.v.android")
@@ -32,36 +37,18 @@ def qiang_cai(device_name):
     time_start = time.time()
     while True:
         start = time.time()
-        if d(textContains="结算(").exists:
-            print("点击结算")
-            d(textContains="结算(").click()
-        else:
-            print("点击全选")
-            if d(text="全选").exists:
-                print("点击全选")
-                d(text="全选").click()
 
-        if d(text="我知道了").exists:
-            print("点击我知道了")
-            d(text="我知道了").click()
+        click_btn(d, "结算(") if d(textContains="结算(").exists else click_btn(d, "全选")
 
-        if d(text="重新加载").exists:
-            print("重新加载")
-            d(text="重新加载").click()
+        click_btn(d, "我知道了")
 
-        if d(text="返回购物车").exists:
-            print("点击返回购物车")
-            d(text="返回购物车").click()
+        click_btn(d, "重新加载")
 
-        if d(text="立即支付").exists:
-            print("点击立即支付")
-            play_voice("success")
-            d(text="立即支付").click()
+        click_btn(d, "返回购物车")
 
-        if d(text="确认并支付").exists:
-            print("点击确认并支付")
-            play_voice("success")
-            d(text="确认并支付").click()
+        click_btn(d, "立即支付")
+
+        click_btn(d, "确认并支付")
 
         if d(textContains="极速支付").exists:
             print("极速支付")
