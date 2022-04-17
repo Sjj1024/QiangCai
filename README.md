@@ -75,13 +75,13 @@ python -m uiautomator2 init
 ![](https://img-blog.csdnimg.cn/4349aac9a9334b629141628e94bf8c84.png)
   
 ## 三.开始抢菜
-打开美团，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
+打开美团买菜，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
 ![](https://img-blog.csdnimg.cn/abc35dbaedc044b9b11e42f0d5f35313.png)
 
 用记事本打开meituan.py，修改源代码中的设备编码（改为你自己的，adb devices命令执行后得到的结果中的）：
 ![](https://img-blog.csdnimg.cn/834563085e7046d0b4117d802da639a3.png)
 
-开始美团APP代码：  
+1.开始美团APP代码：  
 下载美团APP，进入美团买菜入口，然后进入购物车页面，运行下面代码即可  
 ```python
 python meituan.py
@@ -89,7 +89,7 @@ python meituan.py
 python3 meituan.py
 ```
 
-开始美团买菜APP代码：  
+2.开始美团买菜APP代码：  
 下载美团买菜，然后进入购物车页面，运行下面代码即可  
 ```python
 python meituan_maicai.py
@@ -97,7 +97,7 @@ python meituan_maicai.py
 python3 meituan_maicai.py
 ```
 
-开始叮咚抢菜：  
+3.开始叮咚APP抢菜：  
 ```python
 python dingdong.py
 或者
@@ -106,7 +106,7 @@ python3 dingdong.py
 
 多设备运行：  
 复制meituan.py 或者dingdong.py，修改复制文件中的设备编号，然后执行开始程序即可。  
-
+ 
 最后看一下成果：
 （因为我有两个安卓手机，又另外开了一个安卓虚拟机，所以就是下面效果了，哈哈哈哈哈）
 ![](https://img-blog.csdnimg.cn/a561fae90f80420c9be3ae9ee9560da7.gif)
