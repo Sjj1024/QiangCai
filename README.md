@@ -81,14 +81,23 @@ python -m uiautomator2 init
 用记事本打开meituan.py，修改源代码中的设备编码（改为你自己的，adb devices命令执行后得到的结果中的）：
 ![](https://img-blog.csdnimg.cn/834563085e7046d0b4117d802da639a3.png)
 
-开始美团运行代码：
+开始美团APP代码：  
+下载美团APP，进入美团买菜入口，然后进入购物车页面，运行下面代码即可  
 ```python
 python meituan.py
 或者：
 python3 meituan.py
 ```
 
-开始叮咚抢菜：
+开始美团买菜APP代码：  
+下载美团买菜，然后进入购物车页面，运行下面代码即可  
+```python
+python meituan_maicai.py
+或者：
+python3 meituan_maicai.py
+```
+
+开始叮咚抢菜：  
 ```python
 python dingdong.py
 或者
@@ -104,3 +113,9 @@ python3 dingdong.py
 
 再展示一下抢到的菜吧，同时祝大家早日抢到自己喜欢的菜吧，也希望疫情赶紧结束：
 ![](https://img-blog.csdnimg.cn/86b6a70bdd14416e868ac566cea08657.png)
+
+
+## 常见问题汇总：  
+1.使用网易的mumu模拟器过程中发现不能正常获取设备码。
+通过执行adb connect 127.0.0.1:7555 (7555是模拟器端口，其他模拟器可以改一下)连接到模拟器，代码里的设备码填写127.0.0.1:7555，经测试可正常使用。  
+

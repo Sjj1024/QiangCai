@@ -27,7 +27,7 @@ def play_voice(content):
 
 def qiang_cai(device_name):
     d = connect_phone(device_name)
-    d.app_start("com.sankuai.meituan")
+    d.app_start("com.meituan.retail.v.android")
     count = 1
     time_start = time.time()
     while True:
@@ -121,6 +121,6 @@ def run(device_name):
 
 
 if __name__ == '__main__':
-    # 修改为设备编码，多设备运行时第二个设备文件
-    device_name = "b8c282ac"
+    # 修改为设备编码，
+    device_name = "RFCN309ABWX"
     run(device_name)
