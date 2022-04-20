@@ -25,10 +25,10 @@ def play_voice(content):
     threading.Thread(target=playsound, args=(video_path,)).start()
 
 def click_btn(d, text):
-    if text in ["确认并支付", "立即支付"]:
-        play_voice("success")
     if d(textContains=text).exists:
         print("点击" + text)
+        if text in ["确认并支付", "立即支付"]:
+            play_voice("success")
         d(textContains=text).click()
 
 def qiang_cai(device_name):
