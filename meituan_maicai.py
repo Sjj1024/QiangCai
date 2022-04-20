@@ -26,6 +26,8 @@ def play_voice(content):
     threading.Thread(target=playsound, args=(video_path,)).start()
 
 def click_btn(d, text):
+    if text in ["确认并支付", "立即支付"]:
+        play_voice("success")
     if d(textContains=text).exists:
         print("点击" + text)
         d(textContains=text).click()
@@ -109,5 +111,5 @@ def run(device_name):
 
 if __name__ == '__main__':
     # 修改为设备编码，
-    device_name = "RFCN309ABWX"
+    device_name = "b8c282ac"
     run(device_name)
