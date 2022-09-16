@@ -77,30 +77,31 @@ python -m uiautomator2 init
 打开美团买菜，并进入购物车页面，确认购物车里是有商品的：（没有商品肯定是不行的，对吧）
 ![](https://img-blog.csdnimg.cn/abc35dbaedc044b9b11e42f0d5f35313.png)
 
-用记事本打开meituan.py，修改源代码中的设备编码（改为你自己的，adb devices命令执行后得到的结果中的）：
+用记事本打开main.py，修改源代码中的设备编码（改为你自己的，adb devices命令执行后得到的结果中的）：
 ![](https://img-blog.csdnimg.cn/834563085e7046d0b4117d802da639a3.png)
 
 1.开始美团APP代码：  
-下载美团APP，进入美团买菜入口，然后进入购物车页面，运行下面代码即可  
+下载美团APP，进入美团买菜入口，然后进入购物车页面，运行下面代码，输入编号2即可   
 ```python
-python meituan.py
+python main.py
 或者：
-python3 meituan.py
+python3 main.py
 ```
 
 2.开始美团买菜APP代码：  
-下载美团买菜，然后进入购物车页面，运行下面代码即可  
+下载美团买菜，然后进入购物车页面，运行下面代码，输入编号3即可  
 ```python
-python meituan_maicai.py
+python main.py
 或者：
-python3 meituan_maicai.py
+python3 main.py
 ```
 
 3.开始叮咚APP抢菜：  
+下载叮咚买菜，然后进入购物车页面，运行下面代码，输入编号1即可  
 ```python
-python dingdong.py
+python main.py
 或者
-python3 dingdong.py
+python3 main.py
 ```
 
 多设备运行：  

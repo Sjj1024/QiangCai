@@ -119,7 +119,6 @@ def qiang_cai(device_name):
 
 def run(device_name):
     play_voice("start")
-    print("开始执行抢菜程序.....")
     while True:
         try:
             qiang_cai(device_name)

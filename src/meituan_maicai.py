@@ -3,7 +3,7 @@ import platform
 import time
 import threading
 import uiautomator2 as u2
-
+import random
 
 # 连接手机
 def connect_phone(device_name):
@@ -30,7 +30,12 @@ def click_btn(d, text):
         print("点击" + text)
         if text in ["确认并支付", "立即支付"]:
             play_voice("success")
-        d(textContains=text).click()
+            d(textContains=text).click()
+        elif "结算" in text:
+            d(textContains=text).click()
+        else:
+            d(textContains=text).click()
+            time.sleep(random.choice([124, 150, 180, 300, 500, 800]))
 
 def qiang_cai(device_name):
     d = connect_phone(device_name)
@@ -39,29 +44,20 @@ def qiang_cai(device_name):
     time_start = time.time()
     while True:
         start = time.time()
-
         click_btn(d, "结算(") if d(textContains="结算(").exists else click_btn(d, "全选")
-
         click_btn(d, "我知道了")
-
         click_btn(d, "重新加载")
-
         click_btn(d, "返回购物车")
-
         click_btn(d, "立即支付")
-
         click_btn(d, "确认并支付")
-
         if d(textContains="极速支付").exists:
             print("极速支付")
             play_voice("success")
             break
-
         if d(textContains="普通支付").exists:
             print("普通支付")
             play_voice("success")
             break
-
         if d(resourceId="btn-line").exists:
             play_voice("success")
             print("确认支付")
@@ -99,7 +95,6 @@ def get_device_list():
 
 def run(device_name):
     play_voice("start")
-    print("开始执行抢菜程序.....")
     while True:
         try:
             qiang_cai(device_name)
@@ -111,5 +106,6 @@ def run(device_name):
 
 if __name__ == '__main__':
     # 修改为设备编码，
-    device_name = "b8c282ac"
+    # device_name = "192.168.31.194:5566"
+    device_name = "192.168.31.197:5566"
     run(device_name)

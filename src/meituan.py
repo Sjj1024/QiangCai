@@ -12,6 +12,9 @@ def connect_phone(device_name):
         print("start uiautomator")
         d.uiautomator.start()
         time.sleep(2)
+    package_name = d.info.get("currentPackageName")
+    print(f"启动的APP是：{package_name}")
+    d.app_start(package_name)
     return d
 
 
@@ -33,7 +36,6 @@ def click_btn(d, text):
 
 def qiang_cai(device_name):
     d = connect_phone(device_name)
-    d.app_start("com.sankuai.meituan")
     count = 1
     time_start = time.time()
     while True:
@@ -98,7 +100,6 @@ def get_device_list():
 
 def run(device_name):
     play_voice("start")
-    print("开始执行抢菜程序.....")
     while True:
         try:
             qiang_cai(device_name)
