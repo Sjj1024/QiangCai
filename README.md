@@ -49,7 +49,7 @@ windows adb安装:
 1.解压  
 解压到任意目录,例如我都放在D:\Program Files文件夹下面   
 这样adb的目录就是D:\Program Files\platform-tools  
-2.添加环境变量  
+2.添加环境变量    
 此电脑->系统属性->高级系统设置->环境变量->系统变量->Path->添加->D:\Program Files\platform-tools  
 （如果不想装adb，在项目的sources目录下带有win和mac的adb依赖，直接进入文件夹，运行adb也行。但不保证兼容每个设备）  
 安卓手机：安卓手机一部或者多部，或者安卓虚拟机一个或者多个，安装有美团外卖或者叮咚买菜  
