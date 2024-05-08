@@ -6,7 +6,6 @@
 ![](https://img-blog.csdnimg.cn/a561fae90f80420c9be3ae9ee9560da7.gif)
 
 使用说明：  
-博客教程地址：https://1024shen.com/archives/7493  
 远程协助软件地址：https://www.todesk.com/download.html
 
 
