@@ -19,6 +19,7 @@ def run(device_name):
         print("开始执行美团抢菜APP抢菜程序.....")
         maicai_run(device_name)
 
+
 if __name__ == '__main__':
     # 修改为设备编码
     device_name = "RFCN309ABWX"
